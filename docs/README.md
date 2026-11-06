@@ -31,7 +31,7 @@ python -m unittest
 
 <!-- Add yourself here on your Git lesson: - Your Name (role) -->
 
-- (your squad will add themselves here)
+- Anthony (building QuestForge)
 
 ## Where to start
 
