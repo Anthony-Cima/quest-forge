@@ -1,0 +1,11 @@
+{
+  "title": "The Lost Key",
+  "start": "entrance",
+  "rooms": {
+    "entrance": {"description": "A cold entrance hall of grey stone.", "exits": {"north": "library", "east": "kitchen"}},
+    "library": {"description": "Dusty shelves lean under old books.", "exits": {"south": "entrance", "east": "study"}},
+    "kitchen": {"description": "A cramped kitchen smelling of woodsmoke.", "exits": {"west": "entrance"}},
+    "study": {"description": "A tidy study with a locked desk drawer.", "exits": {"west": "library"}}
+  },
+  "history": [2, 3, 4]
+}
