@@ -18,6 +18,23 @@ class TestCore(unittest.TestCase):
         room = {"description": "A cramped kitchen.", "exits": {}}
         self.assertEqual(core.describe(room), "A cramped kitchen.")
 
+    #Copilot assisted with wrting comprehensive test function by explaining structure
+    def test_neighbors_returns_destinations_and_handles_dead_end(self):
+        data = {"rooms": {
+            "entrance": {
+                "description": "Entrance.",
+                "exits": {"north": "library", "east": "kitchen"},
+            },
+            "library": {"description": "Library.", "exits": {}},
+            "kitchen": {"description": "Kitchen.", "exits": {}},
+        }}
+
+        self.assertEqual(
+            core.neighbors(data, "entrance"),
+            ["library", "kitchen"],
+        )
+        self.assertEqual(core.neighbors(data, "library"), [])
+
 
 if __name__ == "__main__":
     unittest.main()
