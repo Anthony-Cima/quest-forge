@@ -38,3 +38,9 @@ def exits_by_room(data):
 
 def first_exit(room):
     return list(room["exits"].keys())[0]
+
+
+# Lesson 8 neighbors funcion
+def neighbors(data, room_key):
+    exits = data["rooms"][room_key]["exits"]
+    return list(exits.values())
