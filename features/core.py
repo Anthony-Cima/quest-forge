@@ -26,6 +26,7 @@ def room_count(data):
 
 
 def move(data, current_key, direction):
+    #Moves the player from one room to another allowing them to emsplore the map to the fullest
     return data["rooms"][current_key]["exits"].get(direction, current_key)
 
 
