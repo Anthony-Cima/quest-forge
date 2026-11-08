@@ -18,6 +18,7 @@ def show_menu():
     print("6) Exit breakdown")
     print("7) First exit here")
     print("8) World summary")
+    print("9) Nearby rooms")
     print("0) Quit")
 
 
@@ -57,6 +58,12 @@ def main():
             print(core.first_exit(room))
         elif choice == "8":
             print(reports.world_summary(data))
+        elif choice == "9":
+            nearby = core.neighbors(data, current)
+            if nearby:
+                print("You can reach: " + ", ".join(nearby))
+            else:
+                print("There are no rooms reachable from here.")
         else:
             print("Please pick a number from the menu.")
 
