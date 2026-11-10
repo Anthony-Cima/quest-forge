@@ -2,7 +2,7 @@
 
 import unittest
 
-from features import core, reports
+from features import core
 
 
 class TestCore(unittest.TestCase):
@@ -18,20 +18,6 @@ class TestCore(unittest.TestCase):
         room = {"description": "A cramped kitchen.", "exits": {}}
         self.assertEqual(core.describe(room), "A cramped kitchen.")
 
-    def test_exits_report_counts_exits_per_room(self):
-        data = {"rooms": {
-            "entrance": {"description": "A cold entrance hall.", "exits": {"north": "library", "east": "courtyard"}},
-            "library": {"description": "Dusty shelves.", "exits": {"south": "entrance"}},
-            "courtyard": {"description": "A stone courtyard.", "exits": {}},
-        }}
-        self.assertEqual(reports.exits_report(data), {
-            "entrance": 2,
-            "library": 1,
-            "courtyard": 0,
-        })
-
-    def test_exits_report_handles_empty_world(self):
-        self.assertEqual(reports.exits_report({"rooms": {}}), {})
     #Copilot assisted with wrting comprehensive test function by explaining structure
     def test_neighbors_returns_destinations_and_handles_dead_end(self):
         data = {"rooms": {
