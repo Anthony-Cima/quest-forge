@@ -16,3 +16,10 @@ release goes first. Keep each entry to what a user would notice.
 ```
 
 <!-- Your first real release note goes below this line. -->
+## v1.1
+### Added
+- Neighbor helper feature
+
+## v1.2
+### Added
+- Exit report functional
