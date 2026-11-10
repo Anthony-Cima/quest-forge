@@ -10,7 +10,7 @@ def world_summary(data):
 
 
 def exits_report(data):
-    # TODO(ticket): tally each room into a {room_key: number_of_exits} dict and return it.
-    # For now this returns an empty report so the menu never crashes.
     report = {}
+    for room_key, room in data.get("rooms", {}).items():
+        report[room_key] = len(room.get("exits", {}))
     return report
