@@ -26,6 +26,7 @@ def room_count(data):
 
 
 def move(data, current_key, direction):
+    #Moves the player from one room to another allowing them to emsplore the map to the fullest
     return data["rooms"][current_key]["exits"].get(direction, current_key)
 
 
@@ -38,3 +39,9 @@ def exits_by_room(data):
 
 def first_exit(room):
     return list(room["exits"].keys())[0]
+
+
+# Lesson 8 neighbors funcion
+def neighbors(data, room_key):
+    exits = data["rooms"][room_key]["exits"]
+    return list(exits.values())

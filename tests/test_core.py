@@ -32,6 +32,22 @@ class TestCore(unittest.TestCase):
 
     def test_exits_report_handles_empty_world(self):
         self.assertEqual(reports.exits_report({"rooms": {}}), {})
+    #Copilot assisted with wrting comprehensive test function by explaining structure
+    def test_neighbors_returns_destinations_and_handles_dead_end(self):
+        data = {"rooms": {
+            "entrance": {
+                "description": "Entrance.",
+                "exits": {"north": "library", "east": "kitchen"},
+            },
+            "library": {"description": "Library.", "exits": {}},
+            "kitchen": {"description": "Kitchen.", "exits": {}},
+        }}
+
+        self.assertEqual(
+            core.neighbors(data, "entrance"),
+            ["library", "kitchen"],
+        )
+        self.assertEqual(core.neighbors(data, "library"), [])
 
 
 if __name__ == "__main__":
