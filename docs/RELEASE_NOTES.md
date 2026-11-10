@@ -18,8 +18,12 @@ release goes first. Keep each entry to what a user would notice.
 <!-- Your first real release note goes below this line. -->
 ## v1.1
 ### Added
-- Neighbor helper feature
+- Added a neighbor helper feature that identifies and retrieves rooms connected to the player's current room through exits.(#1)
 
 ## v1.2
 ### Added
-- Exit report functional
+- Implemented a functional exit reporting system that displays information about the available exits from the current room. (#9)
+
+## v2.0
+### Changed
+- Updated documentation for first release.
