@@ -23,3 +23,7 @@ release goes first. Keep each entry to what a user would notice.
 ## v1.2
 ### Added
 - Implemented a functional exit reporting system that displays information about the available exits from the current room. (#9)
+
+## v2.0
+### Changed
+- Updated documentation for first release.
