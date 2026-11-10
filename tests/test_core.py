@@ -18,6 +18,14 @@ class TestCore(unittest.TestCase):
         room = {"description": "A cramped kitchen.", "exits": {}}
         self.assertEqual(core.describe(room), "A cramped kitchen.")
 
+    def test_count_exits_returns_number_of_exits(self):
+        room = {"exits": {"north": "library", "east": "kitchen"}}
+        self.assertEqual(core.count_exits(room), 2)
+
+    def test_count_exits_returns_zero_when_room_has_no_exits(self):
+        room = {"exits": {}}
+        self.assertEqual(core.count_exits(room), 0)
+
 
 if __name__ == "__main__":
     unittest.main()
